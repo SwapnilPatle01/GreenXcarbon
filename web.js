@@ -1,3 +1,12 @@
+// Menu Bar Toggle
+const menuBar = document.getElementById("menu-bar");
+const navLinks = document.querySelector(".nav-links");
+
+menuBar.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuBar.classList.toggle("open");
+});
+
 AOS.init({
   duration: 1200,
   easing: "ease-in-out",

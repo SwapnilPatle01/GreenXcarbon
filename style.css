@@ -1,5 +1,10 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
   font-family: "Poppins", sans-serif;
   color: #333;
   overflow-x: hidden;
@@ -45,8 +50,7 @@ body {
     transform: rotate(360deg);
   }
 }
-
-/* ----------------Navbar Styling-----------------*/
+/* ----------------Navbar Styling----------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -59,35 +63,80 @@ body {
   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent */
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
-
 .navbar .logo {
   font-size: 1.5rem;
-  color: #00c853;
   font-weight: bold;
+  color: #00c853;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
+  align-items: center;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .nav-links li {
   margin: 0 15px;
 }
+
 .nav-links li a {
-  color: #000000;
-}
-.nav-links a {
   text-decoration: none;
-  color: white;
+  color: #000000;
   font-size: 1rem;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
   color: #00c853;
 }
+
+.nav-links li button {
+  background-color: #00c853;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-links li button:hover {
+  background-color: #009624;
+}
+
+/* Menu Toggle Button */
+.menu-bar {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-bar .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #009624;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animation for Menu Bar Toggle */
+.menu-bar.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-bar.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-bar.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* ----------------Hero Section---------------- */
+
 .hero {
   position: relative;
   width: 100%;
@@ -793,6 +842,7 @@ footer {
 }
 
 /* ----------------Partners section styling---------------- */
+
 .partners {
   background: linear-gradient(135deg, #f5fff5, #d9f7d9);
   padding: 60px 20px;
@@ -844,6 +894,7 @@ footer {
 }
 
 /* ----------------Footer  Styling---------------- */
+
 .footer {
   background-color: #2c3e50;
   color: #ecf0f1;
@@ -948,38 +999,86 @@ footer {
 }
 
 /* -------------------------Responsive Design-------------------------- */
+
 @media (max-width: 768px) {
-  .navbar {
+  /* ---------Navbar Reponsive------------ */
+  .nav-links {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
   }
 
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 20px;
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .nav-links li {
     margin: 10px 0;
+    text-align: center;
   }
 
-  .social-icons {
-    margin-top: 20px;
+  .menu-bar {
+    display: flex;
   }
+
+  .logo {
+    order: -1;
+  }
+
+  .menu-bar {
+    order: 1;
+  }
+
+  /* ---------Hero Section Reponsive------------ */
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0.5rem;
+    width: 100%;
+  }
+
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   .cta-button,
   .buy-credits-button {
     padding: 10px 20px;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
+
+  /*------------Sustainable Future Responsive --------- */
+  .future-text {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+  }
+  .stat-card {
+    width: 100%;
+  }
+
+  /* ---------Solution Section Reponsive------------ */
+
   .solution-card {
     flex-direction: column;
   }
@@ -987,6 +1086,25 @@ footer {
   .card-content {
     padding: 15px;
   }
+
+  /* ---------Project Section Reponsive------------ */
+
+  .project-row {
+    flex-direction: column;
+  }
+
+  .project-row.reverse {
+    flex-direction: column;
+  }
+  .project-text p {
+    text-align: justify;
+  }
+  .project-image {
+    width: 100%;
+  }
+
+  /* ---------About Section Reponsive------------ */
+
   .about-container {
     flex-direction: column;
   }
@@ -999,7 +1117,9 @@ footer {
     text-align: center;
     flex: 1 1 100%;
   }
-
+  .about-content p {
+    text-align: justify;
+  }
   .about-content h2 {
     font-size: 2rem;
   }
@@ -1007,13 +1127,15 @@ footer {
   .about-btn {
     margin-top: 20px;
   }
-  .project-row {
-    flex-direction: column;
+
+  /* ---------Why Choose-Us Reponsive------------ */
+
+  .feature-card {
+    width: 100%;
   }
 
-  .project-row.reverse {
-    flex-direction: column;
-  }
+  /* ---------Footer Reponsive------------ */
+
   .footer-content {
     flex-direction: column;
     align-items: flex-start;
@@ -1021,5 +1143,13 @@ footer {
 
   .footer-section {
     width: 100%;
+    flex: 0 0;
+    margin-bottom: 20px;
+  }
+  .social-media {
+    text-align: center;
+  }
+  .footer-bottom {
+    margin-top: 0;
   }
 }
