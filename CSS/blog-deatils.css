@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ----------------Navbar Styling----------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px 5px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* Glassy effect */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  color: #00c853;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: #000000;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00c853;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cta-button,
+.buy-credits-button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button {
+  background-color: #00a859;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.buy-credits-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.cta-button:hover,
+.buy-credits-button:hover {
+  background-color: #00563f;
+  transform: scale(1.05);
+}
+
+.buy-credits-button:hover {
+  background-color: #0056b3;
+}
+
+/* Blog Container */
+.blog-container {
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 20px;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: left;
+}
+
+.sidebar ul li a:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* Main Content Styling */
+.main-content {
+  flex: 3;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: slideIn 1s ease-in-out;
+}
+
+.main-content h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.main-content p {
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.main-content::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover,
+.main-content::-webkit-scrollbar-thumb:hover {
+  background-color: #007bff;
+}

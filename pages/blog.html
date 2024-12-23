@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Greenxcarbon - Home</title>
+        <link rel="stylesheet" href="/CSS/blog.css">
+        <!-- <script src="web.js" defer></script> -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            rel="stylesheet">
+    </head>
+    <body>
+        <!-------------------- Navbar ------------------->
+        <nav class="navbar">
+            <div class="logo">GreenXCarbon</div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="hero-buttons">
+                <button class="buy-credits-button">Buy Carbon
+                    Credits</button>
+            </div>
+        </nav><header>
+            <h1>Welcome to GreenXCarbon Blog</h1>
+            <p>Explore resources, insights, and tips on sustainability,
+                eco-forestry, and advanced farming solutions.</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search blog posts...">
+            <button>Search</button>
+        </div>
+
+        <section class="blog-section">
+            <div class="blog-card" data-id="1">
+                <img
+                    src="/assets/pexels-shkrabaanthony-5816286.jpg"
+                    alt="Blog Image">
+                <div class="content">
+                    <h3>10 Must-Have Skills for Sustainable Farming</h3>
+                    <p>Discover the key skills every farmer needs to embrace
+                        sustainable practices in 2025.</p>
+                    <p class="meta">December 23, 2024 | 8 min read</p>
+                </div>
+            </div>
+
+            <div class="blog-card" data-id="2">
+                <img src="/assets/neil-thomas-SIU1Glk6v5k-unsplash.jpg"
+                    alt="Blog Image">
+                <div class="content">
+                    <h3>Reforestation: Restoring Degraded Lands</h3>
+                    <p>Learn how reforestation is crucial for a healthy
+                        ecosystem and carbon sequestration.</p>
+                    <p class="meta">December 20, 2024 | 10 min read</p>
+                </div>
+            </div>
+
+            <div class="blog-card" data-id="3">
+                <img src="/assets/pexels-brett-sayles-2896891.jpg"
+                    alt="Blog Image">
+                <div class="content">
+                    <h3>Advanced Tech in Eco-Forestry</h3>
+                    <p>Explore how technology is transforming sustainable
+                        forestry practices worldwide.</p>
+                    <p class="meta">December 18, 2024 | 12 min read</p>
+                </div>
+            </div>
+            <div class="blog-card" data-id="4">
+                <img
+                    src="/assets/pexels-loic-manegarium-3855962.jpg"
+                    alt="Blog Image">
+                <div class="content">
+                    <h3>10 Must-Have Skills for Sustainable Farming</h3>
+                    <p>Discover the key skills every farmer needs to embrace
+                        sustainable practices in 2025.</p>
+                    <p class="meta">December 23, 2024 | 8 min read</p>
+                </div>
+            </div>
+
+            <div class="blog-card" data-id="5">
+                <img src="/assets/neil-thomas-SIU1Glk6v5k-unsplash.jpg"
+                    alt="Blog Image">
+                <div class="content">
+                    <h3>Reforestation: Restoring Degraded Lands</h3>
+                    <p>Learn how reforestation is crucial for a healthy
+                        ecosystem and carbon sequestration.</p>
+                    <p class="meta">December 20, 2024 | 10 min read</p>
+                </div>
+            </div>
+
+            <div class="blog-card" data-id="6">
+                <img src="/assets/pexels-brett-sayles-2896891.jpg"
+                    alt="Blog Image">
+                <div class="content">
+                    <h3>Advanced Tech in Eco-Forestry</h3>
+                    <p>Explore how technology is transforming sustainable
+                        forestry practices worldwide.</p>
+                    <p class="meta">December 18, 2024 | 12 min read</p>
+                </div>
+            </div>
+            <div class="blog-card" data-id="7">
+                <img
+                    src="/assets/pexels-shkrabaanthony-5816286.jpg"
+                    alt="Blog Image">
+                <div class="content">
+                    <h3>10 Must-Have Skills for Sustainable Farming</h3>
+                    <p>Discover the key skills every farmer needs to embrace
+                        sustainable practices in 2025.</p>
+                    <p class="meta">December 23, 2024 | 8 min read</p>
+                </div>
+            </div>
+
+            <div class="blog-card" data-id="8">
+                <img src="/assets/neil-thomas-SIU1Glk6v5k-unsplash.jpg"
+                    alt="Blog Image">
+                <div class="content">
+                    <h3>Reforestation: Restoring Degraded Lands</h3>
+                    <p>Learn how reforestation is crucial for a healthy
+                        ecosystem and carbon sequestration.</p>
+                    <p class="meta">December 20, 2024 | 10 min read</p>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Add click event listeners to all blog cards
+            document.querySelectorAll(".blog-card").forEach(card => {
+                card.addEventListener("click", function () {
+                    const blogId = this.getAttribute("data-id"); // Get blog ID
+                    window.location.href = `/pages/blog-details.html?id=${blogId}`; // Redirect to blog details page with ID
+                });
+            });
+        </script>
+
+        <!-- Other links for icons and animation -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"></script>
+    </body>
+</html>

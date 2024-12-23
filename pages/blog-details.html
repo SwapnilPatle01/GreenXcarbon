@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GreenXCarbon Blog</title>
+        <link rel="stylesheet" href="/CSS/blog-deatils.css">
+    </head>
+    <body>
+        <!-------------------- Navbar ------------------->
+        <nav class="navbar">
+            <div class="logo">GreenXCarbon</div>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="hero-buttons">
+                <button class="buy-credits-button">Buy Carbon Credits</button>
+            </div>
+        </nav>
+
+        <div class="blog-container">
+            <div class="sidebar">
+                <h3>Quick Links</h3>
+                <ul id="quick-links">
+                    <!-- Dynamic quick links will be injected here -->
+                </ul>
+            </div>
+
+            <div class="main-content">
+                <div class="blog-title">Blog Post Title</div>
+                <div class="blog-meta">Published on December 23, 2024</div>
+                <div class="blog-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Animi fuga in tenetur fugiat quia explicabo adipisci rem
+                        molestiae incidunt voluptatum.</p>
+                    <h3>Heading 1</h3>
+                    <p>Content under heading 1.</p>
+                    <h3>Heading 2</h3>
+                    <p>Content under heading 2.</p>
+                    <h3>Heading 3</h3>
+                    <p>Content under heading 3.</p>
+                </div>
+            </div>
+
+            <script>
+        // Blog data object
+        const blogData = {
+            1: {
+                title: "10 Must-Have Skills for Sustainable Farming",
+                meta: "Published on December 23, 2024 | 8 min read",
+                content: `
+                    <p>Sustainable farming is essential for a healthy planet...</p>
+                    <h3>Soil Management</h3>
+                    <p>Soil is the foundation of agriculture. Without healthy soil, the productivity of crops declines, and the ecosystem suffers. Soil management refers to the practices that maintain or enhance the quality of soil for optimal plant growth, environmental health, and long-term agricultural sustainability. Proper soil management ensures that we can continue to grow food, manage natural resources, and sustain biodiversity for generations to come. This blog explores the importance of soil management, its key practices, and how it impacts agriculture and the environment.</p>
+                    <h3>Water Conservation</h3>
+                    <p>Soil degradation is a serious issue that impacts food security, water quality, and climate change. As global populations grow, it is crucial that we adopt sustainable soil management practices to ensure long-term food production. These practices not only help maintain the soil’s health but also mitigate climate change by sequestering carbon in the soil.
+
+Carbon Sequestration: Well-managed soils can store carbon in the form of organic matter, helping reduce the amount of CO2 in the atmosphere. This is particularly important in combating climate change, as soils have the potential to sequester more carbon than forests.
+
+Reducing Soil Compaction: Overuse of heavy machinery or improper land management can lead to soil compaction, reducing water infiltration and root penetration. Sustainable management practices like avoiding working the soil when it is wet can help prevent compaction.
+
+Agroforestry and Permaculture: Integrating trees and other perennial plants into agricultural systems can improve soil structure, reduce erosion, and provide additional income streams. Agroforestry promotes biodiversity and supports ecosystem services, including water regulation and habitat creation.
+
+5. The Future of Soil Management
+The future of soil management lies in the adoption of innovative technologies, research, and policy changes. Advances in soil science, such as precision farming and soil health monitoring tools, allow farmers to manage their soil more efficiently. Soil management should also become a central part of policy decisions, with governments supporting sustainable farming practices, incentivizing soil conservation, and promoting education on soil health.
+</p>
+                    <h3>Use of Renewable Energy</h3>
+                    <p>The future of soil management lies in the adoption of innovative technologies, research, and policy changes. Advances in soil science, such as precision farming and soil health monitoring tools, allow farmers to manage their soil more efficiently. Soil management should also become a central part of policy decisions, with governments supporting sustainable farming practices, incentivizing soil conservation, and promoting education on soil health.</p>
+                `
+            },
+            2: {
+                title: "Reforestation: Restoring Degraded Lands",
+                meta: "Published on December 20, 2024 | 10 min read",
+                content: `
+                    <p>Reforestation improves air quality...</p>
+                    <h3>Benefits to Wildlife</h3>
+                    <p>Reforestation provides habitats...</p>
+                    <h3>Carbon Sequestration</h3>
+                    <p>How trees capture carbon...</p>
+                `
+            },
+            3: {
+                title: "Advanced Tech in Eco-Forestry",
+                meta: "Published on December 18, 2024 | 12 min read",
+                content: `
+                    <p>Technology is transforming forestry...</p>
+                    <h3>AI in Forestry</h3>
+                    <p>AI helps manage forests efficiently...</p>
+                    <h3>Drone Technology</h3>
+                    <p>Drones for monitoring and reforestation...</p>
+                `
+            }
+        };
+
+        // Get the blog ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = urlParams.get("id");
+
+        // Select elements to update
+        const blogTitle = document.querySelector(".blog-title");
+        const blogMeta = document.querySelector(".blog-meta");
+        const blogContent = document.querySelector(".blog-content");
+        const quickLinks = document.getElementById("quick-links");
+
+        // Populate blog content dynamically
+        if (blogData[blogId]) {
+            blogTitle.innerHTML = blogData[blogId].title;
+            blogMeta.innerHTML = blogData[blogId].meta;
+            blogContent.innerHTML = blogData[blogId].content;
+
+            // Generate quick links for headings
+            const headings = blogContent.querySelectorAll("h3");
+            quickLinks.innerHTML = ""; // Clear existing links
+            headings.forEach((heading, index) => {
+                const link = document.createElement("li");
+                const anchor = document.createElement("a");
+                anchor.href = `#heading-${index}`;
+                anchor.textContent = heading.textContent;
+                link.appendChild(anchor);
+                quickLinks.appendChild(link);
+
+                // Add IDs to headings for navigation
+                heading.id = `heading-${index}`;
+            });
+        } else {
+            blogTitle.innerHTML = "Blog Not Found";
+            blogMeta.innerHTML = "";
+            blogContent.innerHTML = "<p>The blog you are looking for does not exist.</p>";
+            quickLinks.innerHTML = "<li>No related articles found.</li>";
+        }
+        </script>
+        </body>
+    </html>
