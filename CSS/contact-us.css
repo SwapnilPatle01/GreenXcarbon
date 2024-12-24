@@ -68,20 +68,26 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-.buy-credits-button {
-  background-color: #007bff;
+.nav-links li .buy-credit-button  {
   color: white;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: ease-in-out .5s;
 }
 
-.cta-button:hover,
-.buy-credits-button:hover {
+.nav-links li .buy-credit-button:hover {
+  background-color: #00c853;
+  color: #000000;
+}
+.cta-button:hover {
   background-color: #00563f;
   transform: scale(1.05);
 }
 
-.buy-credits-button:hover {
-  background-color: #0056b3;
-}
 header {
   text-align: center;
   padding: 2rem;

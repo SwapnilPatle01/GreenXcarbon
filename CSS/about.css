@@ -53,26 +53,19 @@ body {
   justify-content: center;
 }
 
-.cta-button,
-.buy-credits-button {
-  padding: 10px 30px;
-  font-size: 1rem;
+.nav-links li .buy-credit-button  {
+  color: white;
+  background-color: #000000;
   border: none;
   border-radius: 5px;
+  padding: 10px 30px;
+  font-size: .9rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s;
 }
 
-.cta-button {
-  background-color: #00a859;
-  color: white;
-  animation: fadeIn 2s ease-in-out;
-}
-
-.buy-credits-button {
-  background-color: #007bff;
-  color: white;
+.buy-credit-button:hover {
+  background-color: #00c853;
 }
 
 .cta-button:hover,

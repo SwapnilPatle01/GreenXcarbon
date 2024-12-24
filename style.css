@@ -64,9 +64,9 @@ body {
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 .navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #00c853;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .nav-links {
@@ -91,19 +91,20 @@ body {
   color: #00c853;
 }
 
-.nav-links li button {
-  background-color: #00c853;
+.nav-links li .buy-credit-button  {
   color: white;
+  background-color: #000000;
   border: none;
   border-radius: 5px;
-  padding: 8px 15px;
-  font-size: 1rem;
+  padding: 10px 30px;
+  font-size: .9rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: ease-in-out .5s;
 }
 
-.nav-links li button:hover {
-  background-color: #009624;
+.nav-links li .buy-credit-button:hover {
+  background-color: #00c853;
+  color: #000000;
 }
 
 /* Menu Toggle Button */
