@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".nav-item");
+  const currentPath = window.location.pathname;
+
+  navItems.forEach((item) => {
+    if (item.getAttribute("href") === currentPath) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+});
+
 // Menu Bar Toggle
 const menuBar = document.getElementById("menu-bar");
 const navLinks = document.querySelector(".nav-links");

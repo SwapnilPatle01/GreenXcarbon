@@ -13,19 +13,24 @@
     <body>
         <!-------------------- Navbar ------------------->
         <nav class="navbar">
-            <div class="logo"><img src="/assets/GreenXCarbon logo.png" alt="logo" width="250px"></div>
+            <div class="logo">
+                <img src="/assets/GreenXCarbon logo.png" alt="logo"
+                    width="250px">
+            </div>
             <div class="menu-bar" id="menu-bar">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
             <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/about.html">About</a></li>
-                <li><a href="/pages/blog.html">Blogs</a></li>
-                <li><a href="/pages/contact-us.html">Contact</a></li>
-                <li><a href="/pages/carbon-credits.html" class="buy-credit-button">Buy Carbon
-                    Credits</a></li>
+                <li><a href="/index.html" class="nav-item">Home</a></li>
+                <li><a href="/pages/about.html" class="nav-item">About</a></li>
+                <li><a href="/pages/blog.html" class="nav-item">Blogs</a></li>
+                <li><a href="/pages/contact-us.html"
+                        class="nav-item">Contact</a></li>
+                <li><a href="/pages/carbon-credits.html"
+                        class="buy-credit-button nav-item">Buy Carbon
+                        Credits</a></li>
             </ul>
         </nav>
 
@@ -189,6 +194,28 @@
             </div>
         </footer>
         <script>
+            document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".nav-item");
+  const currentPath = window.location.pathname;
+
+  navItems.forEach((item) => {
+    if (item.getAttribute("href") === currentPath) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+});
+
+// Menu Bar Toggle
+const menuBar = document.getElementById("menu-bar");
+const navLinks = document.querySelector(".nav-links");
+
+menuBar.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuBar.classList.toggle("open");
+});
+
             // Add click event listeners to all blog cards
             document.querySelectorAll(".blog-card").forEach(card => {
                 card.addEventListener("click", function () {

@@ -1,256 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Carbon Credits</title>
-    <link rel="stylesheet" href="/CSS/carbon-creadits.css">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buy Carbon Credits</title>
+        <link rel="stylesheet" href="/CSS/carbon-creadits.css">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+            rel="stylesheet">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            rel="stylesheet">
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"></script>
+    </head>
 
-<body>
-    <nav class="navbar">
-        <div class="logo"><img src="/assets/GreenXCarbon logo.png" alt="logo" width="250px"></div>
-        <div class="menu-bar" id="menu-bar">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="nav-links" style="height: 100%;  align-items: center;">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li><a href="/pages/blog.html">Blogs</a></li>
-            <li><a href="/pages/contact-us.html">Contact</a></li>
-            <li><a href="/pages/wallet.html" class="buy-credit-button">Wallet 0 Credits</a></li>
-        </ul>
-    </nav>
+    <body>
+        <!-------------------- Navbar ------------------->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/assets/GreenXCarbon logo.png" alt="logo"
+                    width="250px">
+            </div>
+            <div class="menu-bar" id="menu-bar">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/index.html" class="nav-item">Home</a></li>
+                <li><a href="/pages/about.html" class="nav-item">About</a></li>
+                <li><a href="/pages/blog.html" class="nav-item">Blogs</a></li>
+                <li><a href="/pages/contact-us.html"
+                        class="nav-item">Contact</a></li>
+                <li><a href="/pages/carbon-credits.html"
+                        class="buy-credit-button nav-item">Buy Carbon
+                        Credits</a></li>
+            </ul>
+        </nav>
+        <main class="content" style="margin: auto 20px;">
+            <header class="page-header" data-aos="fade-in">
+                <h1>Buy Carbon Credits</h1>
+                <p>Take a meaningful step toward a sustainable future with
+                    GreenXCarbon.</p>
+            </header>
 
-    <main class="content" style="margin: auto 20px;">
-        <header class="page-header" data-aos="fade-in">
-            <h1>Buy Carbon Credits</h1>
-            <p>Take a meaningful step toward a sustainable future with GreenXCarbon.</p>
-        </header>
-
-        <div class="search-container">
-            <input type="text" placeholder="Search Credit ex. reforestation">
-            <button>Search</button>
-        </div>
-
-        <section class="credit-cards" id="credit-cards" data-aos="fade-right">
-            <!-- Tree Plantation Credit -->
-            <div class="credit-card" data-aos="fade-right">
-                <img src="" alt="Tree Plantation" class="credit-card-image" id="tree-plantation">
-                <h2 class="credit-title">Tree Plantation Credit</h2>
-                <p class="credit-description">Fund the plantation of one tree.</p>
-                <p class="credit-price">₹150</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
+            <div class="search-container">
+                <input type="text"
+                    placeholder="Search Credit ex. reforestation">
+                <button>Search</button>
             </div>
 
-            <!-- Carbon Offset Credit -->
-            <div class="credit-card">
-                <img src="" alt="Carbon Offset" class="credit-card-image" id="carbon-offset">
-                <h2 class="credit-title">Carbon Offset Credit</h2>
-                <p class="credit-description">Offset 10 kg of carbon emissions.</p>
-                <p class="credit-price">₹200</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
+            <section class="credit-cards" id="credit-cards"
+                data-aos="fade-right">
+                <!-- Tree Plantation Credit -->
+                <div class="credit-card" data-aos="fade-right">
+                    <img src alt="Tree Plantation" class="credit-card-image"
+                        id="tree-plantation">
+                    <h2 class="credit-title">Tree Plantation Credit</h2>
+                    <p class="credit-description">Fund the plantation of one
+                        tree.</p>
+                    <p class="credit-price">₹150</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Carbon Offset Credit -->
+                <div class="credit-card">
+                    <img src alt="Carbon Offset" class="credit-card-image"
+                        id="carbon-offset">
+                    <h2 class="credit-title">Carbon Offset Credit</h2>
+                    <p class="credit-description">Offset 10 kg of carbon
+                        emissions.</p>
+                    <p class="credit-price">₹200</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Clean Water Credit -->
+                <div class="credit-card">
+                    <img src alt="Clean Water" class="credit-card-image"
+                        id="clean-water">
+                    <h2 class="credit-title">Clean Water Credit</h2>
+                    <p class="credit-description">Provide 100 liters of clean
+                        water.</p>
+                    <p class="credit-price">₹100</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Plastic-Free Credit -->
+                <div class="credit-card">
+                    <img src alt="Plastic-Free" class="credit-card-image"
+                        id="plastic-free">
+                    <h2 class="credit-title">Plastic-Free Credit</h2>
+                    <p class="credit-description">Sponsor removal of 1 kg of
+                        plastic waste.</p>
+                    <p class="credit-price">₹250</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Solar Power Credit -->
+                <div class="credit-card">
+                    <img src alt="Solar Power" class="credit-card-image"
+                        id="solar-power">
+                    <h2 class="credit-title">Solar Power Credit</h2>
+                    <p class="credit-description">Support generation of 10 kWh
+                        solar energy.</p>
+                    <p class="credit-price">₹300</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Biodiversity Credit -->
+                <div class="credit-card">
+                    <img src alt="Biodiversity" class="credit-card-image"
+                        id="biodiversity">
+                    <h2 class="credit-title">Biodiversity Credit</h2>
+                    <p class="credit-description">Conserve 1 sq. meter of
+                        habitat.</p>
+                    <p class="credit-price">₹180</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Recycling Credit -->
+                <div class="credit-card">
+                    <img src alt="Recycling" class="credit-card-image"
+                        id="recycling">
+                    <h2 class="credit-title">Recycling Credit</h2>
+                    <p class="credit-description">Recycle 5 kg of waste
+                        materials.</p>
+                    <p class="credit-price">₹120</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Energy Efficiency Credit -->
+                <div class="credit-card">
+                    <img src alt="Energy Efficiency" class="credit-card-image"
+                        id="energy-efficiency">
+                    <h2 class="credit-title">Energy Efficiency Credit</h2>
+                    <p class="credit-description">Save 1 kWh of energy.</p>
+                    <p class="credit-price">₹100</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Sustainable Farming Credit -->
+                <div class="credit-card">
+                    <img src alt="Sustainable Farming" class="credit-card-image"
+                        id="sustainable-farming">
+                    <h2 class="credit-title">Sustainable Farming Credit</h2>
+                    <p class="credit-description">Support 1 sq. meter of organic
+                        farming.</p>
+                    <p class="credit-price">₹200</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Clean Air Credit -->
+                <div class="credit-card">
+                    <img src alt="Clean Air" class="credit-card-image"
+                        id="clean-air">
+                    <h2 class="credit-title">Clean Air Credit</h2>
+                    <p class="credit-description">Reduce 1 kg of particulate
+                        matter.</p>
+                    <p class="credit-price">₹250</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Education Credit -->
+                <div class="credit-card">
+                    <img src alt="Education" class="credit-card-image"
+                        id="education">
+                    <h2 class="credit-title">Education Credit</h2>
+                    <p class="credit-description">Provide environmental
+                        education to a child.</p>
+                    <p class="credit-price">₹50</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+
+                <!-- Green Transport Credit -->
+                <div class="credit-card">
+                    <img src alt="Green Transport" class="credit-card-image"
+                        id="green-transport">
+                    <h2 class="credit-title">Green Transport Credit</h2>
+                    <p class="credit-description">Sponsor 10 km of cycling
+                        infrastructure.</p>
+                    <p class="credit-price">₹400</p>
+                    <button class="purchase-button">Purchase Credit</button>
+                    <button class="wallet-button">Add to Wallet</button>
+                </div>
+            </section>
+        </main>
+
+        <section class="help-section">
+            <div class="section-content">
+                <div class="description" data-aos="fade-right">
+                    <h1>How Carbon Credits Help Our Users</h1>
+                    <p>At GreenXCarbon, our goal is to empower individuals and
+                        organizations to actively participate in
+                        reducing their carbon footprint and contribute to
+                        environmental sustainability. By purchasing carbon
+                        credits, our users can make a meaningful difference in
+                        various areas of the environment, from tree
+                        plantation to clean energy initiatives. Here's how these
+                        credits benefit our users:</p>
+                </div>
+                <div class="image" data-aos="fade-left">
+                    <img src alt="Satisfied Users" id="satisfied-users" />
+                </div>
             </div>
 
-            <!-- Clean Water Credit -->
-            <div class="credit-card">
-                <img src="" alt="Clean Water" class="credit-card-image" id="clean-water">
-                <h2 class="credit-title">Clean Water Credit</h2>
-                <p class="credit-description">Provide 100 liters of clean water.</p>
-                <p class="credit-price">₹100</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
+            <div class="benefits-cards">
+                <!-- Environmental Impact Card -->
+                <div class="card" data-aos="fade-up">
+                    <h3>Environmental Impact</h3>
+                    <p>Each carbon credit purchased contributes to tangible
+                        environmental actions, such as planting trees,
+                        reducing plastic waste, and promoting clean energy.
+                        These actions help combat climate change,
+                        conserve biodiversity, and improve the quality of life
+                        for communities.</p>
+                </div>
 
-            <!-- Plastic-Free Credit -->
-            <div class="credit-card">
-                <img src="" alt="Plastic-Free" class="credit-card-image" id="plastic-free">
-                <h2 class="credit-title">Plastic-Free Credit</h2>
-                <p class="credit-description">Sponsor removal of 1 kg of plastic waste.</p>
-                <p class="credit-price">₹250</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
+                <!-- Contribute to a Sustainable Future Card -->
+                <div class="card" data-aos="fade-up">
+                    <h3>Contribute to a Sustainable Future</h3>
+                    <p>Carbon credits offer a simple and effective way for users
+                        to participate in global sustainability
+                        efforts. Whether it's supporting renewable energy,
+                        reforestation, or waste recycling, users directly
+                        contribute to preserving natural resources for future
+                        generations.</p>
+                </div>
 
-            <!-- Solar Power Credit -->
-            <div class="credit-card">
-                <img src="" alt="Solar Power" class="credit-card-image" id="solar-power">
-                <h2 class="credit-title">Solar Power Credit</h2>
-                <p class="credit-description">Support generation of 10 kWh solar energy.</p>
-                <p class="credit-price">₹300</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
+                <!-- Trackable Results Card -->
+                <div class="card" data-aos="fade-up">
+                    <h3>Trackable Results</h3>
+                    <p>Our platform allows users to monitor the impact of their
+                        purchases in real time. Whether it's
+                        tracking how many trees have been planted or how much
+                        carbon has been offset, users can see the
+                        measurable results of their efforts.</p>
+                </div>
 
-            <!-- Biodiversity Credit -->
-            <div class="credit-card">
-                <img src="" alt="Biodiversity" class="credit-card-image" id="biodiversity">
-                <h2 class="credit-title">Biodiversity Credit</h2>
-                <p class="credit-description">Conserve 1 sq. meter of habitat.</p>
-                <p class="credit-price">₹180</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
+                <!-- Support for Social Causes Card -->
+                <div class="card" data-aos="fade-up">
+                    <h3>Support for Social Causes</h3>
+                    <p>Many of the carbon credits available for purchase also
+                        support social programs, such as providing
+                        clean water, promoting education, and encouraging
+                        sustainable farming practices. By purchasing these
+                        credits, users not only help the environment but also
+                        contribute to social well-being and community
+                        development.</p>
+                </div>
 
-            <!-- Recycling Credit -->
-            <div class="credit-card">
-                <img src="" alt="Recycling" class="credit-card-image" id="recycling">
-                <h2 class="credit-title">Recycling Credit</h2>
-                <p class="credit-description">Recycle 5 kg of waste materials.</p>
-                <p class="credit-price">₹120</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
+                <!-- Corporate Responsibility Card -->
+                <div class="card" data-aos="fade-up">
+                    <h3>Corporate Responsibility</h3>
+                    <p>For businesses, purchasing carbon credits is an excellent
+                        way to meet sustainability goals and
+                        enhance their brand reputation. By offsetting emissions,
+                        companies can demonstrate their commitment
+                        to the environment and attract eco-conscious
+                        customers.</p>
+                </div>
 
-            <!-- Energy Efficiency Credit -->
-            <div class="credit-card">
-                <img src="" alt="Energy Efficiency" class="credit-card-image" id="energy-efficiency">
-                <h2 class="credit-title">Energy Efficiency Credit</h2>
-                <p class="credit-description">Save 1 kWh of energy.</p>
-                <p class="credit-price">₹100</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
+                <!-- Affordable and Accessible Card -->
+                <div class="card" data-aos="fade-up">
+                    <h3>Affordable and Accessible</h3>
+                    <p>Our carbon credits are offered at different price points,
+                        making it easy for individuals, small
+                        businesses, and large corporations to participate in
+                        environmental conservation, regardless of their
+                        budget. Whether you choose a small action like planting
+                        a tree or a larger investment in renewable
+                        energy, every contribution counts.</p>
+                </div>
 
-            <!-- Sustainable Farming Credit -->
-            <div class="credit-card">
-                <img src="" alt="Sustainable Farming" class="credit-card-image" id="sustainable-farming">
-                <h2 class="credit-title">Sustainable Farming Credit</h2>
-                <p class="credit-description">Support 1 sq. meter of organic farming.</p>
-                <p class="credit-price">₹200</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
+                <!-- Educational Opportunities Card -->
+                <div class="card" data-aos="fade-up">
+                    <h3>Educational Opportunities</h3>
+                    <p>By engaging with our platform, users learn more about
+                        environmental issues and sustainable practices.
+                        Our educational resources help users understand the
+                        importance of reducing their carbon footprint
+                        and how their actions contribute to global change.</p>
+                </div>
 
-            <!-- Clean Air Credit -->
-            <div class="credit-card">
-                <img src="" alt="Clean Air" class="credit-card-image" id="clean-air">
-                <h2 class="credit-title">Clean Air Credit</h2>
-                <p class="credit-description">Reduce 1 kg of particulate matter.</p>
-                <p class="credit-price">₹250</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
-
-            <!-- Education Credit -->
-            <div class="credit-card">
-                <img src="" alt="Education" class="credit-card-image" id="education">
-                <h2 class="credit-title">Education Credit</h2>
-                <p class="credit-description">Provide environmental education to a child.</p>
-                <p class="credit-price">₹50</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
-            </div>
-
-            <!-- Green Transport Credit -->
-            <div class="credit-card">
-                <img src="" alt="Green Transport" class="credit-card-image" id="green-transport">
-                <h2 class="credit-title">Green Transport Credit</h2>
-                <p class="credit-description">Sponsor 10 km of cycling infrastructure.</p>
-                <p class="credit-price">₹400</p>
-                <button class="purchase-button">Purchase Credit</button>
-                <button class="wallet-button">Add to Wallet</button>
+                <!-- Building a Green Community Card -->
+                <div class="card" data-aos="fade-up">
+                    <h3>Building a Green Community</h3>
+                    <p>Users who purchase carbon credits join a community of
+                        like-minded individuals and organizations who
+                        are committed to making a difference. This network
+                        fosters collaboration, support, and shared
+                        learning on sustainability practices.</p>
+                </div>
             </div>
         </section>
-    </main>
 
-    <section class="help-section" >
-        <div class="section-content">
-            <div class="description" data-aos="fade-right">
-                <h1>How Carbon Credits Help Our Users</h1>
-                <p>At GreenXCarbon, our goal is to empower individuals and organizations to actively participate in
-                    reducing their carbon footprint and contribute to environmental sustainability. By purchasing carbon
-                    credits, our users can make a meaningful difference in various areas of the environment, from tree
-                    plantation to clean energy initiatives. Here's how these credits benefit our users:</p>
+        <!-------------------- Footer --------------------->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- About Section -->
+                    <div class="footer-section about">
+                        <h3>About <span>GreenXCarbon</span></h3>
+                        <p>
+                            GreenXCarbon is dedicated to sustainable forestry,
+                            environmental stewardship, and empowering farmers to
+                            create a greener planet.
+                        </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-section links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="/pages/about.html">About Us</a></li>
+                            <li><a href="#projects">Our Projects</a></li>
+                            <li><a href="#partners">Partners</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="footer-section contact">
+                        <h3>Contact</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Green
+                            Street, Sustainability City</p>
+                        <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                        <p><i class="fas fa-envelope"></i>
+                            contact@greenxcarbon.org</p>
+                    </div>
+
+                    <!-- Newsletter Subscription -->
+                    <div class="footer-section newsletter">
+                        <h3>Subscribe</h3>
+                        <form id="newsletter-form">
+                            <input type="email" placeholder="Your Email"
+                                required />
+                            <button type="submit">Subscribe</button>
+                        </form>
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 GreenXCarbon. All rights reserved.</p>
+                </div>
             </div>
-            <div class="image" data-aos="fade-left">
-                <img src="" alt="Satisfied Users" id="satisfied-users" />
-            </div>
-        </div>
+        </footer>
 
-        <div class="benefits-cards" >
-            <!-- Environmental Impact Card -->
-            <div class="card" data-aos="fade-up">
-                <h3>Environmental Impact</h3>
-                <p>Each carbon credit purchased contributes to tangible environmental actions, such as planting trees,
-                    reducing plastic waste, and promoting clean energy. These actions help combat climate change,
-                    conserve biodiversity, and improve the quality of life for communities.</p>
-            </div>
+        <script>
 
-            <!-- Contribute to a Sustainable Future Card -->
-            <div class="card" data-aos="fade-up">
-                <h3>Contribute to a Sustainable Future</h3>
-                <p>Carbon credits offer a simple and effective way for users to participate in global sustainability
-                    efforts. Whether it's supporting renewable energy, reforestation, or waste recycling, users directly
-                    contribute to preserving natural resources for future generations.</p>
-            </div>
+document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".nav-item");
+  const currentPath = window.location.pathname;
 
-            <!-- Trackable Results Card -->
-            <div class="card" data-aos="fade-up">
-                <h3>Trackable Results</h3>
-                <p>Our platform allows users to monitor the impact of their purchases in real time. Whether it's
-                    tracking how many trees have been planted or how much carbon has been offset, users can see the
-                    measurable results of their efforts.</p>
-            </div>
+  navItems.forEach((item) => {
+    if (item.getAttribute("href") === currentPath) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+});
 
-            <!-- Support for Social Causes Card -->
-            <div class="card" data-aos="fade-up">
-                <h3>Support for Social Causes</h3>
-                <p>Many of the carbon credits available for purchase also support social programs, such as providing
-                    clean water, promoting education, and encouraging sustainable farming practices. By purchasing these
-                    credits, users not only help the environment but also contribute to social well-being and community
-                    development.</p>
-            </div>
+// Menu Bar Toggle
+const menuBar = document.getElementById("menu-bar");
+const navLinks = document.querySelector(".nav-links");
 
-            <!-- Corporate Responsibility Card -->
-            <div class="card" data-aos="fade-up">
-                <h3>Corporate Responsibility</h3>
-                <p>For businesses, purchasing carbon credits is an excellent way to meet sustainability goals and
-                    enhance their brand reputation. By offsetting emissions, companies can demonstrate their commitment
-                    to the environment and attract eco-conscious customers.</p>
-            </div>
+menuBar.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuBar.classList.toggle("open");
+});
 
-            <!-- Affordable and Accessible Card -->
-            <div class="card" data-aos="fade-up">
-                <h3>Affordable and Accessible</h3>
-                <p>Our carbon credits are offered at different price points, making it easy for individuals, small
-                    businesses, and large corporations to participate in environmental conservation, regardless of their
-                    budget. Whether you choose a small action like planting a tree or a larger investment in renewable
-                    energy, every contribution counts.</p>
-            </div>
-
-            <!-- Educational Opportunities Card -->
-            <div class="card" data-aos="fade-up">
-                <h3>Educational Opportunities</h3>
-                <p>By engaging with our platform, users learn more about environmental issues and sustainable practices.
-                    Our educational resources help users understand the importance of reducing their carbon footprint
-                    and how their actions contribute to global change.</p>
-            </div>
-
-            <!-- Building a Green Community Card -->
-            <div class="card" data-aos="fade-up">
-                <h3>Building a Green Community</h3>
-                <p>Users who purchase carbon credits join a community of like-minded individuals and organizations who
-                    are committed to making a difference. This network fosters collaboration, support, and shared
-                    learning on sustainability practices.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <p>Have questions? Reach out to our support team at <a
-                href="mailto:support@greenxcarbon.com">support@greenxcarbon.com</a>.</p>
-    </footer>
-
-    <script>
         const apiKey = "SA8KJpC7F0NstrkBtXP9mevZbg912xKPHPTECdXpNsvTDJqpU4bPRcNE";
         const apiUrl = "https://api.pexels.com/v1/search?query=";
         const creditImages = {
@@ -309,15 +447,13 @@
         });
     </script>
 
-    <script>
+        <script>
         AOS.init({
             duration: 1200,
             easing: "ease-in-out",
         });
     </script>
 
-
-
-</body>
+    </body>
 
 </html>
