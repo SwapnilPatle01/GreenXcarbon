@@ -1,41 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Greenxcarbon - Contact</title>
-        <link rel="stylesheet" href="/CSS/contact-us.css">
-        <!-- <script src="web.js" defer></script> -->
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-            rel="stylesheet">
-    </head>
-    <body>
-        <!-------------------- Navbar ------------------->
-        <nav class="navbar">
-            <div class="logo"><img src="/assets/GreenXCarbon logo.png" alt="logo" width="250px"></div>
-            <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/about.html">About</a></li>
-                <li><a href="/pages//blog.html">Blogs</a></li>
-                <li><a href="/pages//contact-us.html">Contact</a></li>
-                <li><a href="/pages/carbon-credits.html" class="buy-credit-button">Buy Carbon
-                    Credits</a></li>
-            </ul>
-        
-        </nav>
-        <header>
-            <h1>Get in Touch with GreenXCarbon</h1>
-            <p>We'd love to hear from you! Reach out for inquiries, support, or
-                collaboration opportunities.</p>
-        </header>
 
-        <!-- Other links for icons and animation -->
-        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
-            rel="stylesheet">
-        <script
-            src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js"
-            crossorigin="anonymous"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenXCarbon - Contact</title>
+    <link rel="stylesheet" href="/CSS/contact-us.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><img src="/assets/GreenXCarbon logo.png" alt="GreenXCarbon Logo" width="250px"></div>
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/blog.html">Blogs</a></li>
+            <li><a href="/pages/contact-us.html">Contact</a></li>
+            <li><a href="/pages/carbon-credits.html" class="buy-credit-button">Buy Carbon Credits</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Header -->
+    <header>
+        <h1>Get in Touch with GreenXCarbon</h1>
+        <p>We'd love to hear from you! Reach out for inquiries, support, or collaboration opportunities.</p>
+    </header>
+
+
+
+    <!-- Contact Information Section -->
+    <section class="contact-info">
+        <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Phone</h3>
+            <p>+1 (123) 456-7890</p>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>info@greenxcarbon.com</p>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Our Office</h3>
+            <p>123 Green Lane, Eco Park, City, State, Zip Code</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+
+    <!-- Hero Section for Career -->
+    <section class="career-hero">
+        <div class="hero-left" data-aos="fade-right">
+            <section class="contact-form">
+                <h1>Send Us a Message</h1>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+        </div>
+        <div class="hero-content" data-aos="fade-left">
+            <h1>Empower Your Career with GreenXCarbon</h1>
+            <p>Join us in driving sustainable change and shaping a greener tomorrow. At GreenXCarbon, we believe in
+                empowering individuals to make a difference, one step at a time.</p>
+            <p>Be part of a team that values innovation, collaboration, and environmental stewardship. Together, we can
+                redefine the future.</p>
+            <a href="/pages/about.html" class="explore-btn">Explore Our Mission</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 GreenXCarbon. All rights reserved.</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1200,
+            easing: "ease-in-out",
+        });
+    </script>
+</body>
+
 </html>

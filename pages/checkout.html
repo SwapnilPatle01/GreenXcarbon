@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/CSS/checkout.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/pages/carbon-credits.html">Back to Shop</a>
+    </nav>
+
+    <main>
+        <header class="checkout-header">
+            <h1>Checkout</h1>
+        </header>
+
+        <div class="checkout-details">
+            <h2>Title: <span id="creditName"></span></h2>
+            <p>Price: ₹<span id="price"></span></p>
+            <button onclick="openForm()">Proceed to Checkout</button>
+        </div>
+
+        <form id="buyerForm" style="display: none;">
+            <h3>Buyer Information</h3>
+
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <!-- Phone -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Enter your address" required></textarea>
+
+            <!-- Razorpay Payment -->
+            <button type="button" id="razorpayButton">Pay with Razorpay</button>
+        </form>
+    </main>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        // Extract query parameters and populate checkout details
+        const params = new URLSearchParams(window.location.search);
+        const creditName = params.get('creditName') || 'Unknown Credit';
+        const price = params.get('price') || '0';
+
+        document.getElementById('creditName').textContent = creditName;
+        document.getElementById('price').textContent = price;
+
+        // Display the buyer form
+        function openForm() {
+            document.getElementById('buyerForm').style.display = 'block';
+        }
+
+        // Razorpay Integration
+        document.getElementById('razorpayButton').addEventListener('click', function () {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+
+            if (!name || !email || !phone || !address) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            const options = {
+                key: 'YOUR_RAZORPAY_KEY', // Replace with your Razorpay key
+                amount: price * 25, // Razorpay expects amount in paise
+                currency: 'INR',
+                name: 'Carbon Credits',
+                description: `Payment for ${creditName}`,
+                handler: function (response) {
+                    alert(`Payment successful! Transaction ID: ${response.razorpay_payment_id}`);
+                    window.location.href = '/index.html';
+                },
+                prefill: {
+                    name: name,
+                    email: email,
+                    contact: phone
+                },
+                notes: {
+                    address: address
+                },
+                theme: {
+                    color: '#3399cc'
+                }
+            };
+
+            const razorpay = new Razorpay(options);
+            razorpay.open();
+        });
+    </script>
+</body>
+
+</html>

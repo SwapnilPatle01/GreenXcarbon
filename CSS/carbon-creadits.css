@@ -3,7 +3,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #333;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #f5fff5, #d9f7d9)
+  background: linear-gradient(135deg, #f5fff5, #d9f7d9);
 }
 /* ----------------Navbar Styling-----------------*/
 .navbar {
@@ -17,6 +17,7 @@ body {
   backdrop-filter: blur(10px); /* Glassy effect */
   background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent */
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
 }
 
 .navbar .logo {
@@ -46,148 +47,327 @@ body {
 .nav-links a:hover {
   color: #00c853;
 }
-.nav-links li .buy-credit-button  {
-    color: white;
-    background-color: #000000;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 30px;
-    font-size: .9rem;
-    cursor: pointer;
-    transition: ease-in-out .5s;
-  }
-  
-  .nav-links li .buy-credit-button:hover {
-    background-color: #00c853;
-    color: #000000;
-  }
+.nav-links li .buy-credit-button {
+  color: white;
+  background-color: #000000;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+.nav-links li .buy-credit-button:hover {
+  background-color: #00c853;
+  color: #000000;
+}
 
 /* Header------------ */
 header.page-header {
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
-    padding: 2rem 1rem;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  padding: 5rem 1rem;
 }
 
 header.page-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+  margin: 0;
+  font-size: 2.5rem;
 }
 
 header.page-header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
 }
 
 /* cards */
 .card {
-    background: #fff;
-    margin-top: 20px;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin-top: 20px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card h2 {
-    color: #4CAF50;
+  color: #4caf50;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.form-group input{
-    width: 98.5%;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.form-group input {
+  width: 98.5%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .form-group select {
-    width: 100%;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .form-group button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .form-group button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
-/* Section Styling */
-section {
-    padding: 2rem;
-    background-color: white;
-    margin: 1rem auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.credit-cards {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-section h2 {
-    font-size: 1.8rem;
-    color: #4CAF50;
-    margin-bottom: 1rem;
+.credit-card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
 }
 
-section ul, section ol {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.credit-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-section li {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: calc(33.33% - 1rem);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    line-height: 1.6;
+.credit-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
 }
 
-section li strong {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    color: #333;
+.credit-description {
+  font-size: 0.9rem;
+  color: #666;
+  padding: 0 10px;
 }
 
+.credit-price {
+  font-size: 1rem;
+  color: #28a745;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.purchase-button,
+.wallet-button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.purchase-button {
+  background-color: #000;
+  color: #fff;
+}
+
+.purchase-button:hover {
+  background-color: #00c853;
+}
+
+.wallet-button {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
 
 /* Footer */
 footer.footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #2c3e50;
-    color: white;
-    margin-top: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #2c3e50;
+  color: white;
+  margin-top: 2rem;
 }
 
 footer.footer a {
-    color: #4CAF50;
-    text-decoration: none;
+  color: #4caf50;
+  text-decoration: none;
 }
 
 footer.footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+.search-container {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.search-container input[type="text"] {
+  width: 60%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.search-container button {
+  padding: 0.8rem 1.5rem;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #388e3c;
+}
+
+/* Help section */
+.help-section {
+  background: linear-gradient(135deg, #f5fff5, #d9f7d9);
+  padding: 50px 20px;
+  margin: 25px;
+}
+
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.description {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.description h1 {
+  text-align: center;
+  color: #2a7f3d;
+  margin-bottom: 20px;
+}
+
+.description p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  color: #333;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.benefits-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #2a7f3d;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.5em;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  /* ---------Navbar Reponsive------------ */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu-bar {
+    display: flex;
+  }
+
+  .logo {
+    order: -1;
+  }
+
+  .menu-bar {
+    order: 1;
+  }
+  .section-content{
+    width: 100%;
+    flex-direction: column;
+  }
+  .description{
+    width: 100%;
+  }
+  .credit-card{
+    width: 100%;
+    height: auto;
+  }
 }

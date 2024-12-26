@@ -1,8 +1,9 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  color: #333;
+  color: #000;
   overflow-x: hidden;
+  background: linear-gradient(135deg, #f5fff5, #d9f7d9);
 }
 /* ----------------Navbar Styling-----------------*/
 .navbar {
@@ -11,6 +12,7 @@ body {
   align-items: center;
   padding: 5px 25px 5px 25px;
   position: sticky;
+  overflow: hidden;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px); /* Glassy effect */
@@ -68,15 +70,15 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
-.nav-links li .buy-credit-button  {
+.nav-links li .buy-credit-button {
   color: white;
   background-color: #000000;
   border: none;
   border-radius: 5px;
   padding: 10px 30px;
-  font-size: .9rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: ease-in-out .5s;
+  transition: ease-in-out 0.5s;
 }
 
 .nav-links li .buy-credit-button:hover {
@@ -91,7 +93,7 @@ body {
 header {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(90deg, #4caf50, #81c784);
+  background-color: #4caf50;
   color: white;
 }
 
@@ -113,5 +115,240 @@ header p {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Contact Info Section */
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.contact-item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.contact-item i {
+  font-size: 40px;
+  color: #4caf50;
+}
+
+.contact-item h3 {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.contact-item p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Contact Form Section */
+.contact-form {
+  background-color: #fff;
+  padding: 40px 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: #333;
+}
+
+.form-group input {
+  width: 95%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+.form-group textarea {
+  width: 95%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #4caf50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  background-color: #2c3e50;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+.career-hero {
+  color: #fff;
+  text-align: center;
+  background-color: #4caf50;
+  display: flex;
+  height: auto;
+}
+
+.career-hero h1 {
+  font-size: 3rem;
+  text-align: left;
+  padding: 10px;
+}
+
+.career-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.career-hero .explore-btn {
+  padding: 10px 30px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.career-hero .explore-btn:hover {
+  background-color: #218838;
+}
+
+.hero-content {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+.hero-left {
+  width: 50%;
+  display: block;
+}
+.hero-content-logo {
+  margin: 20px;
+}
+
+.contact-form h1 {
+  color: #4caf50;
+  font-size: 25px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* ---------Navbar Reponsive------------ */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu-bar {
+    display: flex;
+  }
+
+  .logo {
+    order: -1;
+  }
+
+  .menu-bar {
+    order: 1;
+  }
+  .career-hero{
+    flex-direction: column;
+  }
+  .hero-left{
+    width: 100%;
+    margin: 20px;
+  }
+  .hero-content{
+    width: 100%;
+    margin: 20px;
+    text-align: justify;
+    margin: 20px 50px;
+    padding: 40px 20px;
+    max-width: 500px;
+
   }
 }

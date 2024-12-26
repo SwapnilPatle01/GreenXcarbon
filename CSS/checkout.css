@@ -1,0 +1,130 @@
+/* General Reset */
+body, h1, h2, h3, p, a, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(35deg, #f5fff5, #d9f7d9);
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #1abc9c;
+}
+
+/* Main Layout */
+main {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Header */
+.checkout-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.checkout-header h1 {
+    font-size: 2rem;
+    color: #34495e;
+}
+
+/* Checkout Details */
+.checkout-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.checkout-details h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.checkout-details p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.checkout-details button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-details button:hover {
+    background-color: #4caf50;
+}
+
+/* Buyer Form */
+#buyerForm {
+    margin-top: 20px;
+}
+
+#buyerForm h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+#buyerForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#buyerForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#buyerForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#buyerForm button:hover {
+    background-color: #4caf50;
+}
